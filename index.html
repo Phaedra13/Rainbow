@@ -45,6 +45,24 @@
                 tree.style.top = -value * 0.15 +'px';
                 text.style.top = -value * 1.4 +'px';
             })
+            function adjustTextTopValue() {
+            const value = window.scrollY;
+            const screenWidth = window.innerWidth; // Get the current screen width
+
+             if (screenWidth <= 800) {
+        // For screen width <= 800px, set a different top value
+             text.style.top = -value * 1.7 + 'px';
+             } else {
+        // For screen width > 800px, set the original top value
+             text.style.top = -value * 1.4 + 'px';
+         }
+        }
+
+            window.addEventListener('scroll', adjustTextTopValue);
+            window.addEventListener('resize', adjustTextTopValue); // Listen for window resize events
+
+         // Initial call to set the initial style based on the screen width
+             adjustTextTopValue();
         </script>
 
         
