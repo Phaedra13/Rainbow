@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rainbow Sunrise Parallax</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <section>
+            <div class="sky">
+                <img src="bg.jpg" id="bg">
+                <img src="tree.png" id="tree">
+            </div>
+            <div class="space">
+                
+            </div>
+            <div class="land">
+                <img src="clouds.png" id="clouds">
+                <img src="rainbow.png" id="rainbow">
+                <img src="cody.png" id="cody">
+                <img src="hills.png" id="hills">
+                <h2 id="text">Fuck You</h2>
+            </div>
+        </section>
+        <script type="text/javascript">
+            let bg = document.getElementById("bg");
+            let clouds = document.getElementById("clouds");
+            let rainbow = document.getElementById("rainbow");
+            let cody = document.getElementById("cody");
+            let hills = document.getElementById("hills");
+            let tree = document.getElementById("tree");
+            let text = document.getElementById("text");
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+
+                bg.style.top = value * 0.55 + 'px';
+                clouds.style.top = value * 1.0 + 'px';
+                rainbow.style.top = -value * 1.5 + 'px';
+                cody.style.top = -value * 3.5 + 'px';
+                hills.style.top = value * 0.15 + 'px';
+                tree.style.left = value * 0.15 +'px';
+                tree.style.top = -value * 0.15 +'px';
+                text.style.top = -value * 1.4 +'px';
+            })
+        </script>
+
+        
+    </body>
+
+
+
+</html>
